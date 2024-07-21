@@ -15,13 +15,16 @@
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="global-page">
 
       <!-- NAVBAR -->
-      <nav class="navbar navbar-expand-lg sticky-top">
+      <!-- <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid nav-main">
           <div class="nav-left">
             <div class="nav-logo">
@@ -55,15 +58,36 @@
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+          <div class="nav-logo">
+            <img class="navbar-brand" src="./assests/images/Sparky Logo.png" href="./index.html">
+          </div>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse"  id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item" ><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item" ><a class="nav-link" href="#product">Our Products</a></li>
+                    <li class="nav-item" ><a class="nav-link" href="#review">Reviews</a></li>
+                    <li class="nav-item" ><a class="nav-link" href="careers.html">Careers</a></li>
+                    <li class="nav-item" ><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 
       <!-- INTRO -->
       
       <div class="main-intro" id="home">
         <div class="main-intro-cont">
-          <h2 class="comp-name">Sparky Food & Beverages</h2>
-          <p class="comp-tag">Add <span class="comp-tag-span">spark</span> to your life.</p>
+          <p class="comp-name">Sparky &nbsp; Food &nbsp; & &nbsp; Beverages</p>
+          <p class="comp-tag">" Add &nbsp; <span class="comp-tag-span">Spark</span> &nbsp; to &nbsp; your &nbsp; life "</p>
         </div>
       </div>
 
@@ -167,9 +191,9 @@
 
 
       <!-- CUSTOMER REVIEWS -->
-      <section class="our-team-section bg-light" id="review">
+      <section class="our-team-section" id="review">
         <div class="container our-team-container" data-aos="flip-left">
-            <h1 class="heading">Testimonials</h1>
+            <h1 class="heading">Customer Reviews</h1>
             <div class="wrapper">
                 <div class="box">
                   <i class="fas fa-quote-left quote"></i>
@@ -241,7 +265,7 @@
               <div class="container">
                   <div class="row justify-content-center">
                       <div class="col-md-6 text-center mb-5">
-                          <h2 class="heading-section">Contact Us</h2>
+                          <h2 class="heading-section heading">Contact Us</h2>
                       </div>
                   </div>
                   <div class="row justify-content-center">
@@ -280,7 +304,7 @@
                                                   <div class="col-md-12 sm-btn">
                                                       <div class="form-group">
                                                           <!-- <input type="submit" value="Send Message" class="btn btn-primary sm-button"> -->
-                                                          <button type="button" class="send-btn">Send Message</button>
+                                                          <button type="button" class="send-btn" value="submit">Send Message</button>
                                                       </div>
                                                   </div>
                                               </div>
@@ -336,5 +360,30 @@
 
     </div>
     
+
+    <script src="./assests/js/script.js"></script>
+    <script>
+      const contactForm = document.getElementById("contactForm");
+
+      contactForm.addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const sub = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+
+          const subject = encodeURIComponent(sub);
+          const body = encodeURIComponent(message);
+          const mailtoLink = `mailto:shomitbhattacharya042@gmail.com?subject=${subject}&body=${body}`;
+
+          // Open the user's email client to compose the email
+          window.location.href = mailtoLink;
+
+          // Optionally, you can add a confirmation message here
+          alert("Your email client should open now. Please press 'Send' to submit the message.");
+      });
+  </script>
+
 </body>
 </html>
