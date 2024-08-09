@@ -218,20 +218,31 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
+
 .pbox{
     background-color: #dedede;
     padding: 20px;
     border-radius: 15px;
+    height: 100%;
 }
 .pbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     transition: 0.3s;
+    height: 320px;
 }
 .pbox:hover{
     transform: scale(1.05);
 }
 .pimg img{
     width: 150px;
+    height: 220px;
     border-radius: 10px;
+}
+.pfull img{
+    width: 300px;
 }
 .pdesc p{
     text-align: center;
@@ -239,6 +250,7 @@ body{
     font-family: "Varela Round";
     font-size: 16px;
     font-weight: 600;
+    width: 150px;
 }
 
 
@@ -344,6 +356,15 @@ body{
   .wt-txt-1{
     margin: 0 0 2rem 1rem;
     font-family: "Varela Round";
+  }
+  .email-txt{
+    font-size: 14px;
+  }
+  .email-txt a{
+    overflow-wrap: anywhere;
+  }
+  .wt-gst{
+    margin: 0 0 0.5rem 0.5rem;
   }
   .send-btn {
     box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1);
