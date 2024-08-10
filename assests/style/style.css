@@ -141,6 +141,7 @@ body{
 }
 .comp-name{
     font-size: 48px;
+    text-align: center;
 }
 .comp-tag{
     font-size: 32px;
