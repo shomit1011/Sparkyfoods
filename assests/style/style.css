@@ -18,7 +18,7 @@ body{
 .navbar{
     background-color: white;
 }
-.nav-logo img{
+.navbar-brand{
     width: 70px;
     height: 80px;
 }
@@ -455,9 +455,9 @@ body{
         width: 100%;
         margin: 10px 0;
     }
-    .nav-logo img{
+    .navbar-brand{
         width: 60px;
-        height: 70px;
+        height: 80px;
     }
     .about-right{
         width: 600px;
