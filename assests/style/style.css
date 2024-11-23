@@ -243,7 +243,7 @@ body{
     border-radius: 10px;
 }
 .pfull img{
-    width: 300px;
+    width: 465px;
 }
 .pdesc p{
     text-align: center;
@@ -406,6 +406,9 @@ body{
         width: 900px;
         margin: auto;
     }
+    .pfull img{
+        width: 420px;
+    }
 }
 
 
@@ -468,6 +471,9 @@ body{
     .about-left img, .vision-right img{
         width: 150px;
         height: 150px;
+    }
+    .pfull img{
+        width: 300px;
     }
 }
 
