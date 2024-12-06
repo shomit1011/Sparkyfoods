@@ -242,6 +242,11 @@ body{
     height: 220px;
     border-radius: 10px;
 }
+.pan_img img{
+    width: 115px;
+    height: 230px;
+    border-radius: 10px;
+}
 .pfull img{
     width: 465px;
 }
